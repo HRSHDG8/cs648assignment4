@@ -6,6 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body{
+            font-family: sans-serif;
+            font-size: 1em;
+        }
+
+        main {
+            display: grid;
+            width: 960px;
+            min-height: 600px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 80px 300px 1fr 50px;
+            grid-gap: 20px;
+            grid-template-areas:
+                "logo head"
+                "prodImage prodImage"
+                "product1 product2"
+                "foot foot";
+            margin: 20px auto;
+        }
+
         main>* {
             background: silver;
         }
@@ -14,6 +34,7 @@
             color: black;
             text-decoration: none;
         }
+
         ul {
 			list-style-type: none;
 			margin: 0;
@@ -30,23 +51,6 @@
             text-align: center;
         }
 
-        main {
-            font-family: sans-serif;
-            font-size: 1em;
-            display: grid;
-            width: 960px;
-            min-height: 600px;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 80px 300px 1fr 50px;
-            grid-gap: 20px;
-            grid-template-areas:
-                "logo head"
-                "prodImage prodImage"
-                "product1 product2"
-                "foot foot";
-            margin: 20px auto;
-        }
-
         .logo {
             width: 200px;
             grid-area: logo
@@ -58,9 +62,7 @@
 
         footer {
             grid-area: foot;
-            display: grid;
-            text-align: center;
-            align-content: center;
+			text-align: center;
         }
     </style>
     <title>Layout 1 - Grid Layout</title>
@@ -86,7 +88,7 @@
             Product 2
         </div>
         <footer>
-            Copyright Notice
+            <p>Copyright Notice</p>
         </footer>
     </main>
 </body>
